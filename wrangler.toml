@@ -4,7 +4,7 @@
 # 3. wrangler dev      (local test at localhost:8787)
 # 4. wrangler deploy   (pushes to *.workers.dev)
 
-name = "html-to-markdown"
+name = "html-markdown"
 main = "worker.js"
 compatibility_date = "2026-06-01"
 compatibility_flags = ["nodejs_compat"]
