@@ -1,0 +1,19 @@
+# Deploy instructions:
+# 1. npm install
+# 2. wrangler login
+# 3. wrangler dev      (local test at localhost:8787)
+# 4. wrangler deploy   (pushes to *.workers.dev)
+
+name = "html-to-markdown"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+[alias]
+"turndown" = "./node_modules/turndown/lib/turndown.cjs.js"
+"@mixmark-io/domino" = "./domino-shim.cjs"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+html_handling = "none"
